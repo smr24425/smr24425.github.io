@@ -4,8 +4,8 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  assetPrefix: isProd ? "/nextjs-blog/" : "",
-  basePath: isProd ? "/nextjs-blog" : "",
+  assetPrefix: isProd ? "/smr24425.github.io/" : "",
+  basePath: isProd ? "/smr24425.github.io" : "",
 };
 
 export default nextConfig;
