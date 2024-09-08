@@ -30,12 +30,12 @@ jobs:
       - name: Pull Docker image
         run: docker pull smr24427/nextjs-blog:latest
 
-      - name: Run Docker container with local directory
-        run: |
-          docker run -d -p 4000:4000 -v ${{ github.workspace }}/next.config.mjs:/app/next.config.mjs smr24427/nextjs-blog:latest
+      # - name: Run Docker container with local directory
+      #   run: |
+      #     docker run -d -p 4000:4000 -v ${{ github.workspace }}/next.config.mjs:/app/next.config.mjs smr24427/nextjs-blog:latest
 
-      - name: show Next.js app
-        run: docker exec $(docker ps -q -f ancestor=smr24427/nextjs-blog:latest) ls -al
+      # - name: show Next.js app
+      #   run: docker exec $(docker ps -q -f ancestor=smr24427/nextjs-blog:latest) ls -al
       - name: Build Next.js app
         run: docker exec $(docker ps -q -f ancestor=smr24427/nextjs-blog:latest) npm run build
 
